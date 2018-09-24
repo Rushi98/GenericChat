@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="About Sender" />
-    <item android:title="Block Sender" />
-    <item android:title="Go Offline" />
+    <item
+        android:id="@+id/option_abt_sender"
+        android:title="About Sender" />
+    <item
+        android:id="@+id/option_block_sender"
+        android:title="Block Sender" />
+    <item
+        android:id="@+id/option_go_offline"
+        android:title="Go Offline" />
 </menu>

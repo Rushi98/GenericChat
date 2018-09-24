@@ -41,6 +41,12 @@ public class ChatActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onSaveInstanceState(final Bundle outState) {
+        outState.putString("logHistory", chatLog);
+        super.onSaveInstanceState(outState);
+    }
+
     private void send(String msg) {
         String event = "Sent : " + msg;
         log(event);
@@ -57,11 +63,5 @@ public class ChatActivity extends AppCompatActivity {
     private void log(String event) {
         chatLog += "\n" + event;
         chatLogTv.setText(chatLog);
-    }
-
-    @Override
-    protected void onSaveInstanceState(final Bundle outState) {
-        outState.putString("logHistory", chatLog);
-        super.onSaveInstanceState(outState);
     }
 }

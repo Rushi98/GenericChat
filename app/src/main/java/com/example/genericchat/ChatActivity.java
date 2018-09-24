@@ -3,6 +3,7 @@ package com.example.genericchat;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
+import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -49,6 +50,12 @@ public class ChatActivity extends AppCompatActivity {
     protected void onSaveInstanceState(final Bundle outState) {
         outState.putString("logHistory", chatLog);
         super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(final Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_chat, menu);
+        return true;
     }
 
     private void send(String msg) {

@@ -2,6 +2,8 @@ package com.example.genericchat;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.MovementMethod;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -31,6 +33,9 @@ public class ChatActivity extends AppCompatActivity {
         chatLogTv = findViewById(R.id.tv_chat_log);
         newMessageEt = findViewById(R.id.et_new_msg);
         sendMsgBtn = findViewById(R.id.ib_send_msg);
+
+        // make chat log scrollable
+        chatLogTv.setMovementMethod(new ScrollingMovementMethod());
 
         sendMsgBtn.setOnClickListener(sendBtnClickListener);
 
